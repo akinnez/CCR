@@ -1,0 +1,697 @@
+[
+	{
+		"id": 1,
+		"name": "Agriculture and Veterinary Medicine",
+		"description": "Don’t think it is just about ‘working the land’. You’ll study land-based industries, such as rural management, animal medicine, GM crops, food security and climate change.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Agriculture"
+			},
+			{
+				"id": 2,
+				"name": "Farm Management"
+			},
+			{
+				"id": 3,
+				"name": "Horticulture"
+			},
+			{
+				"id": 4,
+				"name": "Plant and Crop Sciences"
+			},
+			{
+				"id": 5,
+				"name": "Veterinary Medicine "
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Applied and Pure Sciences",
+		"description": "Involves the study of life, nature and literally everything that surrounds us! You’ll develop scientific thinking, high numeracy skills and methodical approach to problems.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Astronomy"
+			},
+			{
+				"id": 2,
+				"name": "Biology"
+			},
+			{
+				"id": 3,
+				"name": "Biomedical Sciences"
+			},
+			{
+				"id": 4,
+				"name": "Chemistry"
+			},
+			{
+				"id": 5,
+				"name": "Earth Sciences"
+			},
+			{
+				"id": 6,
+				"name": "Environmental Sciences"
+			},
+			{
+				"id": 7,
+				"name": "Food Science and Technology"
+			},
+			{
+				"id": 8,
+				"name": "Forensic science"
+			},
+			{
+				"id": 9,
+				"name": "General Sciences"
+			},
+			{
+				"id": 10,
+				"name": "Life Sciences"
+			},
+			{
+				"id": 11,
+				"name": " Materials Sciences"
+			},
+			{
+				"id": 12,
+				"name": "Mathematics"
+			},
+			{
+				"id": 13,
+				"name": "Physical Geography"
+			},
+			{
+				"id": 14,
+				"name": "Physics"
+			},
+			{
+				"id": 15,
+				"name": "Sports Science"
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Architecture and Construction",
+		"description": "Use your imagination for the design of buildings and spaces in people’s everyday life. It involves the study of sciences, humanities, fine and applied arts to be applied on urban planning.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Architecture"
+			},
+			{
+				"id": 2,
+				"name": "Built Environment"
+			},
+			{
+				"id": 3,
+				"name": "Construction"
+			},
+			{
+				"id": 4,
+				"name": "Maintenance Services"
+			},
+			{
+				"id": 5,
+				"name": "Planning"
+			},
+			{
+				"id": 6,
+				"name": "Property Management"
+			},
+			{
+				"id": 7,
+				"name": "Surveying"
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Business and Management",
+		"description": "Covering finance, accounting, marketing, HR management and administrative studies, you'll gain skills that can open doors for your own initiatives as well as global companies projects.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Accounting"
+			},
+			{
+				"id": 2,
+				"name": "Business Studies"
+			},
+			{
+				"id": 3,
+				"name": "E-Commerce"
+			},
+			{
+				"id": 4,
+				"name": "Entrepreneurship"
+			},
+			{
+				"id": 5,
+				"name": "Finance"
+			},
+			{
+				"id": 6,
+				"name": "Human Resource Management"
+			},
+			{
+				"id": 7,
+				"name": "Management"
+			},
+			{
+				"id": 8,
+				"name": "Marketing"
+			},
+			{
+				"id": 9,
+				"name": "Office Administration"
+			},
+			{
+				"id": 10,
+				"name": "Quality Management"
+			},
+			{
+				"id": 11,
+				"name": "Retail"
+			},
+			{
+				"id": 12,
+				"name": "Transportation and Logistics"
+			}
+		]
+	},
+	{
+		"id": 5,
+		"name": "Computer Science and IT",
+		"description": "Want to be at the edge of technological innovation? Learn about the design, production and use of computing, information systems and software engineering.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Computer Science"
+			},
+			{
+				"id": 2,
+				"name": "Computing"
+			},
+			{
+				"id": 3,
+				"name": "IT"
+			},
+			{
+				"id": 4,
+				"name": "Multimedia"
+			},
+			{
+				"id": 5,
+				"name": "Software"
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "Creative Arts and Design",
+		"description": "Develop your talent in a creative and practical way! You’ll study the creation of visual work, from painting to computer graphics and video games, including fine art and product design.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Art"
+			},
+			{
+				"id": 2,
+				"name": "Art Administration"
+			},
+			{
+				"id": 3,
+				"name": "Crafts"
+			},
+			{
+				"id": 4,
+				"name": "Dance"
+			},
+			{
+				"id": 5,
+				"name": "Fashion and Textile Design"
+			},
+			{
+				"id": 6,
+				"name": "Graphic Design,"
+			},
+			{
+				"id": 7,
+				"name": "Industrial Design"
+			},
+			{
+				"id": 8,
+				"name": "Interior Design,"
+			},
+			{
+				"id": 9,
+				"name": "Music,"
+			},
+			{
+				"id": 10,
+				"name": "Non-industrial Design,"
+			},
+			{
+				"id": 11,
+				"name": "Theatre and Drama Studies"
+			}
+		]
+	},
+	{
+		"id": 7,
+		"description": "You will study of how people develop and learn. You can enrol at undergrad or postgrad teacher training. You will have a hands-on experience at a school or university.",
+		"name": "Education and Training",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Adult Education"
+			},
+			{
+				"id": 2,
+				"name": "CPD"
+			},
+			{
+				"id": 3,
+				"name": "Career Advice"
+			},
+			{
+				"id": 4,
+				"name": "Childhood Education"
+			},
+			{
+				"id": 5,
+				"name": "Coaching"
+			},
+			{
+				"id": 6,
+				"name": "Education Learning"
+			},
+			{
+				"id": 7,
+				"name": "Education Management"
+			},
+			{
+				"id": 8,
+				"name": "Education Research"
+			},
+			{
+				"id": 9,
+				"name": "Educational Psychology"
+			},
+			{
+				"id": 10,
+				"name": "Pedagogy"
+			},
+			{
+				"id": 11,
+				"name": "Special Education"
+			},
+			{
+				"id": 12,
+				"name": "Specialised Teaching"
+			},
+			{
+				"id": 13,
+				"name": "Teacher Training PGCE"
+			}
+		]
+	},
+	{
+		"id": 8,
+		"name": "Engineering",
+		"description": "The practical and innovative application of maths and sciences will be used to design, develop and maintain infrastructures, products and systems on a large scale.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Aerospace Engineering"
+			},
+			{
+				"id": 2,
+				"name": "Biomedical Engineering"
+			},
+			{
+				"id": 3,
+				"name": "Chemical and Materials Engineering"
+			},
+			{
+				"id": 4,
+				"name": "Civil Engineering"
+			},
+			{
+				"id": 5,
+				"name": "Electrical Engineering"
+			},
+			{
+				"id": 6,
+				"name": "Electronic Engineering"
+			},
+			{
+				"id": 7,
+				"name": "Environmental Engineering"
+			},
+			{
+				"id": 8,
+				"name": "General Engineering and Technology"
+			},
+			{
+				"id": 9,
+				"name": "Manufacturing and Production"
+			},
+			{
+				"id": 10,
+				"name": "Marine Engineering"
+			},
+			{
+				"id": 11,
+				"name": "Mechanical Engineering"
+			},
+			{
+				"id": 12,
+				"name": "Metallurgy"
+			},
+			{
+				"id": 13,
+				"name": "Mining and Oil & Gas "
+			},
+			{
+				"id": 14,
+				"name": "Power and Energy Engineering"
+			},
+			{
+				"id": 15,
+				"name": "Quality Control"
+			},
+
+			{
+				"id": 16,
+				"name": "Structural Engineering"
+			},
+			{
+				"id": 17,
+				"name": "Telecommunications"
+			},
+			{
+				"id": 18,
+				"name": "Vehicle Engineering"
+			}
+		]
+	},
+	{
+		"id": 9,
+		"name": "Health and Medicine",
+		"description": "You will study all aspects of the human body for the diagnose, treatment and assessment of patients’ health needs. You’ll have a hands-on learning approach for medicine and surgery.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Complementary Health"
+			},
+			{
+				"id": 2,
+				"name": "Counselling"
+			},
+			{
+				"id": 3,
+				"name": "Dentistry"
+			},
+			{
+				"id": 4,
+				"name": "Dentistry"
+			},
+			{
+				"id": 5,
+				"name": "Health Studies"
+			},
+			{
+				"id": 6,
+				"name": "Health and Safety"
+			},
+			{
+				"id": 7,
+				"name": "Medicine"
+			},
+			{
+				"id": 8,
+				"name": "Midwifery"
+			},
+			{
+				"id": 9,
+				"name": "Nursing"
+			},
+			{
+				"id": 10,
+				"name": "Nutrition and Health"
+			},
+			{
+				"id": 11,
+				"name": "Ophthalmology"
+			},
+			{
+				"id": 12,
+				"name": "Pharmacology"
+			},
+			{
+				"id": 13,
+				"name": "Physiotherapy"
+			},
+			{
+				"id": 14,
+				"name": "Psychology"
+			},
+			{
+				"id": 15,
+				"name": "Public Health"
+			}
+		]
+	},
+	{
+		"id": 10,
+		"name": "Humanities",
+		"description": "You will be trained to think critically and ethically, as well as in good historical knowledge which allows you to interact in various spheres. Other areas include  art and social studies.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Archaeology"
+			},
+			{
+				"id": 2,
+				"name": "Classics"
+			},
+			{
+				"id": 3,
+				"name": "Cultural Studies"
+			},
+			{
+				"id": 4,
+				"name": "English Studies"
+			},
+			{
+				"id": 5,
+				"name": "General Studies"
+			},
+			{
+				"id": 6,
+				"name": "History"
+			},
+			{
+				"id": 7,
+				"name": "Languages"
+			},
+			{
+				"id": 8,
+				"name": "Literature"
+			},
+			{
+				"id": 9,
+				"name": "Museum Studies"
+			},
+			{
+				"id": 10,
+				"name": "Philosophy"
+			},
+			{
+				"id": 11,
+				"name": "Regional Studies"
+			},
+			{
+				"id": 12,
+				"name": "Religious Studies"
+			}
+		]
+	},
+	{
+		"id": 11,
+		"name": "Law",
+		"description": "You will learn how legal systems operate around the world. International law and related areas are popular among international students looking for opportunities worldwide.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Civil Law"
+			},
+			{
+				"id": 2,
+				"name": "Criminal Law"
+			},
+			{
+				"id": 3,
+				"name": "International Law"
+			},
+			{
+				"id": 4,
+				"name": "Legal Advice"
+			},
+			{
+				"id": 5,
+				"name": "Legal Studies"
+			},
+			{
+				"id": 6,
+				"name": "Public Law"
+			}
+		]
+	},
+	{
+		"id": 12,
+		"name": "Personal Care and Fitness",
+		"description": "It involves an understanding of human wellbeing and how to enhance it physically and aesthetically. You will learn about hair, beauty, therapies and how to maintain a healthy lifestyle.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Beauty Therapy"
+			},
+			{
+				"id": 2,
+				"name": "Hairdressing"
+			},
+			{
+				"id": 3,
+				"name": "Health and Fitness"
+			},
+			{
+				"id": 4,
+				"name": "Massage"
+			},
+			{
+				"id": 5,
+				"name": "Therapeutic"
+			}
+		]
+	},
+	{
+		"id": 13,
+		"name": "Social Studies and Media",
+		"description": "You will study how we as human beings interact as part of society. The subject includes practical expressions such as film and media, and theory from sociology and anthropology.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Anthropology"
+			},
+			{
+				"id": 2,
+				"name": "Economics"
+			},
+			{
+				"id": 3,
+				"name": "Environmental Management"
+			},
+			{
+				"id": 4,
+				"name": "Film & Television"
+			},
+			{
+				"id": 5,
+				"name": "Human Geography"
+			},
+			{
+				"id": 6,
+				"name": "International Development"
+			},
+			{
+				"id": 7,
+				"name": "International relations"
+			},
+			{
+				"id": 8,
+				"name": "Journalism"
+			},
+			{
+				"id": 9,
+				"name": "Library Studies"
+			},
+			{
+				"id": 10,
+				"name": "Linguistics"
+			},
+			{
+				"id": 11,
+				"name": "Media"
+			},
+			{
+				"id": 12,
+				"name": "Photography"
+			},
+			{
+				"id": 13,
+				"name": "Politics"
+			},
+			{
+				"id": 14,
+				"name": "Public Administration"
+			},
+			{
+				"id": 15,
+				"name": "Social Sciences"
+			},
+			{
+				"id": 16,
+				"name": "Social Work"
+			},
+			{
+				"id": 17,
+				"name": "Sociology"
+			},
+			{
+				"id": 18,
+				"name": "Writing"
+			}
+		]
+	},
+	{
+		"id": 14,
+		"name": "Travel and Hospitality",
+		"description": "You will study hospitality and travel industry, and its global impact. You will have the possibility to make your passion for travel your career and possibly develop your own business.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Aviation"
+			},
+			{
+				"id": 2,
+				"name": "Catering"
+			},
+			{
+				"id": 3,
+				"name": "Food and Drink Production"
+			},
+			{
+				"id": 4,
+				"name": "Hospitality"
+			},
+			{
+				"id": 5,
+				"name": "Hotel Management"
+			},
+			{
+				"id": 6,
+				"name": "Leisure Management"
+			},
+			{
+				"id": 7,
+				"name": "Travel and Tourism"
+			}
+		]
+	}
+]
