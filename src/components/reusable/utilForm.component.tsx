@@ -35,7 +35,7 @@ function FormComponent({
 	return (
 		<div className={`flex justify-center items-center ${classNames}`}>
 			<div className="w-full md:w-2/3 lg:1/3 shadow-2xl lg:my-5">
-				<Card className="px-5 py-3">
+				<Card className="px-5 py-3 bg-transparent lg:bg-white">
 					<div className="my-5">
 						<h1 className="text-3xl lg:text-4xl font-bold text-center">
 							{title}
