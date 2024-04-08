@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import {Button} from '@/components/ui/button';
 import useName from '@/hooks/useName';
+import {XCircle, Menu} from 'lucide-react';
 
 function Navbar() {
 	const [isOpen, setOpen] = useState(false);
@@ -51,10 +52,10 @@ function Navbar() {
 	];
 	return (
 		<>
-			<header className="sticky top-0 py-4 w-full flex xl:px-20 lg:px-10 justify-between items-center bg-[url('/images/Home.svg')] text-foreground shadow-sm shadow-foreground">
+			<header className="sticky top-0 py-4 w-full flex px-3 xl:px-20 lg:px-10 justify-between items-center bg-[url('/images/Home.svg')] text-foreground shadow-sm shadow-foreground">
 				<div className="lg:hidden">
-					<Button variant={'outline'} onClick={() => open()}>
-						open
+					<Button onClick={() => open()}>
+						<Menu></Menu>
 					</Button>
 				</div>
 				<Link
@@ -75,7 +76,7 @@ function Navbar() {
 						className="absolute top-4 right-0 mx-5 lg:hidden"
 						onClick={() => close()}
 					>
-						clear
+						<XCircle></XCircle>
 					</Button>
 
 					{navList.map((e, i) => (
