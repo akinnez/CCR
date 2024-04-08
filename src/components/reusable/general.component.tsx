@@ -2,9 +2,9 @@
 import {useState} from 'react';
 import SidebarComponent from '@/components/reusable/sidebar.component';
 import NavbarComponent from '@/components/reusable/navbar.component';
-import getValueName from '@/utils/getUsername.util';
+import getValueName from '@/hooks/useName';
 
-function GeneralComponent({children}: {children: any}) {
+function GeneralComponent({getchildren}: {getchildren: any}) {
 	const [isclose, setClose] = useState(false);
 	function close() {
 		setClose(!isclose);
@@ -24,7 +24,7 @@ function GeneralComponent({children}: {children: any}) {
 						isclose={isclose}
 						profileName={getValueName()}
 					/>
-					<div className="px-3 lg:px-10">{children}</div>
+					<div className="px-3 lg:px-10">{getchildren}</div>
 				</div>
 			</div>
 		</>

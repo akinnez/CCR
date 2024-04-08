@@ -1,13 +1,15 @@
+'use client';
 import {useState} from 'react';
 
 import Link from 'next/link';
 
-import getValueName from '@/utils/getUsername.util';
 import {Button} from '@/components/ui/button';
+import useName from '@/hooks/useName';
 
 function Navbar() {
 	const [isOpen, setOpen] = useState(false);
 	const [token, setToken] = useState(false);
+	const name = useName();
 
 	function open() {
 		setOpen(true);
@@ -30,7 +32,7 @@ function Navbar() {
 		},
 		{
 			label: `${token ? 'Course Registration' : 'Academics'}`,
-			link: `${token ? `/${getValueName()}/course-reg` : '/'}`,
+			link: `${token ? `/${name}/course-reg` : '/'}`,
 			classname: '',
 			props: {},
 		},
@@ -56,7 +58,7 @@ function Navbar() {
 					</Button>
 				</div>
 				<Link
-					href={token ? `/${getValueName()}` : '/'}
+					href={token ? `/${name}` : '/'}
 					className="text-2xl lg:text-3xl tracking-wider cursor-pointer"
 				>
 					TheOladejos
@@ -90,7 +92,7 @@ function Navbar() {
 
 				{token ? (
 					<div>
-						<span>{getValueName()}</span>
+						<span>{name}</span>
 					</div>
 				) : (
 					<div>

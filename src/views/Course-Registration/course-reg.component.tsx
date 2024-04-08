@@ -4,7 +4,7 @@ import {useEffect, useState} from 'react';
 import dynamic from 'next/dynamic';
 
 import {Button} from '@/components/ui/button';
-import getValueName from '@/utils/getUsername.util';
+import useName from '@/hooks/useName';
 
 function CourseRegComponent({
 	successFunction,
@@ -35,7 +35,7 @@ function CourseRegComponent({
 	const [checkedValue, setCheckedValue] = useState([]);
 	const [isTableShow, setTableShow] = useState(false);
 	const [isMobileShow, setMobileShow] = useState(false);
-
+	const getName = useName();
 	const TableViewComponent = dynamic(
 		() => import('@/views/Course-Registration/tableView.component'),
 		{ssr: false, loading: () => <>Loading...</>}
@@ -51,7 +51,7 @@ function CourseRegComponent({
 					<h1 className="text-2xl lg:text-4xl text-center font-semibold lg:font-bold my-5">
 						Course Registration
 					</h1>
-					<p>Welcome {getValueName()}, </p>
+					<p>Welcome {getName}, </p>
 					<p>College: Agriculture Science, </p>
 					<p>Department: Aquaculture and fishery management</p>
 				</div>

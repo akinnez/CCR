@@ -1,7 +1,7 @@
 import {useParams} from 'next/navigation';
 
-function getValueName(): string {
+function useName(): string {
 	return useParams()?.id as string;
 }
 
-export default getValueName;
+export default useName;

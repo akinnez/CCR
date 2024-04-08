@@ -1,5 +1,5 @@
 import type {Metadata} from 'next';
-import GeneralComponent from '@/components/reusable/general.component';
+import Navbar from '@/components/reusable/navbar';
 
 export const metadata: Metadata = {
 	title: 'Student Home',
@@ -9,7 +9,8 @@ export default function HomeLayout({children}: {children: React.ReactNode}) {
 	return (
 		<>
 			<div>
-				<GeneralComponent children={children} />
+				<Navbar />
+				<div className="px-3 lg:px-10">{children}</div>
 			</div>
 		</>
 	);
