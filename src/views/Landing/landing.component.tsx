@@ -1,15 +1,16 @@
 import Navbar from '@/components/reusable/navbar';
 import {Button} from '@/components/ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function LandingComponent() {
 	return (
 		<>
 			<Navbar />
-			<div className="h-[1200px] border border-red-900">
+			<div className="px-3 xl:px-20 lg:px-10 border border-red-900">
 				<div className="lg:grid lg:grid-cols-2">
 					<div className="flex justify-center items-center">
-						<div className="w-5/6">
+						<div>
 							<h1 className="text-2xl lg:text-4xl text-center lg:text-left leading-10 font-bold my-5">
 								Welcome to the student portal
 							</h1>
@@ -20,14 +21,78 @@ function LandingComponent() {
 								<br />
 								Get started here to do more...
 							</span>
-							<Button size={'lg'} className="my-5 font-semibold">
-								Get Started
-							</Button>
+							<Link href="/auth/acct-create">
+								<Button
+									size={'lg'}
+									className="my-5 font-semibold"
+								>
+									Create an account
+								</Button>
+							</Link>
 						</div>
 					</div>
 					<div className="flex items-center justify-center">
 						<Image
 							src="/images/Saly-16.svg"
+							width={451}
+							height={334}
+							alt="image"
+						/>
+					</div>
+				</div>
+				<div className="flex flex-col-reverse lg:flex-row ">
+					<div className="flex items-center justify-center lg:w-1/2">
+						<Image
+							src="/images/Saly-14.svg"
+							width={250}
+							height={134}
+							alt="image"
+						/>
+					</div>
+					<div className="flex items-center">
+						<div>
+							<h1 className="text-2xl lg:text-4xl text-center lg:text-left leading-10 font-bold my-5">
+								Register your courses on the go
+							</h1>
+							<span
+								className="block leading-8 w-full"
+								spellCheck="true"
+							>
+								Tired of queing to register for your course at
+								Exams and Record Office? <br />
+								Registration of Courses is now easy and can be
+								done on the go Want to know how? <br />
+								Get started here to do more...
+							</span>
+							<Link href="/auth/acct-create">
+								<Button
+									size={'lg'}
+									className="my-5 font-semibold"
+								>
+									Get Started Now
+								</Button>
+							</Link>
+						</div>
+					</div>
+				</div>
+				<div className="lg:grid lg:grid-cols-2">
+					<div className="flex justify-center items-center">
+						<div>
+							<h1 className="text-2xl lg:text-4xl text-center lg:text-left leading-10 font-bold my-5">
+								Result Checker
+							</h1>
+							<span className="block leading-8">
+								Check your result, anywhere anytime, with ease.
+								Want to know how?{' '}
+							</span>
+							<Button size={'lg'} className="my-5 font-semibold">
+								Get More Info
+							</Button>
+						</div>
+					</div>
+					<div className="flex items-center justify-center">
+						<Image
+							src="/images/Dataextraction.svg"
 							width={451}
 							height={334}
 							alt="image"

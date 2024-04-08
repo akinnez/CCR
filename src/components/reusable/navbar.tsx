@@ -51,7 +51,7 @@ function Navbar() {
 	];
 	return (
 		<>
-			<header className="sticky top-0 py-4 w-full flex lg:px-10 justify-between items-center bg-white text-foreground shadow-sm shadow-foreground">
+			<header className="sticky top-0 py-4 w-full flex xl:px-20 lg:px-10 justify-between items-center bg-[url('/images/Home.svg')] text-foreground shadow-sm shadow-foreground">
 				<div className="lg:hidden">
 					<Button variant={'outline'} onClick={() => open()}>
 						open
@@ -61,7 +61,7 @@ function Navbar() {
 					href={token ? `/${name}` : '/'}
 					className="text-2xl lg:text-3xl tracking-wider cursor-pointer"
 				>
-					TheOladejos
+					ABCollege
 				</Link>
 
 				<nav
@@ -83,7 +83,7 @@ function Navbar() {
 							key={i}
 							{...e.props}
 							href={e.link}
-							className={`text-white lg:text-foreground w-full lg:w-auto text-lg my-2 mx-4 font-medium py-4 lg:py-0 px-6 rounded-md lg:mx-3 lg:text-xl hover:cursor-pointer ${e.classname}`}
+							className={`text-white lg:text-foreground w-full lg:w-auto text-lg my-2 xl:mx-4 font-medium py-4 lg:py-0 px-6 rounded-md lg:mx-1 lg:text-xl hover:cursor-pointer ${e.classname}`}
 						>
 							{e.label}
 						</Link>

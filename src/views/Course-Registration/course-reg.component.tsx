@@ -9,9 +9,7 @@ import useName from '@/hooks/useName';
 function CourseRegComponent({
 	successFunction,
 	formList,
-	isPreview,
 }: {
-	isPreview?: boolean;
 	successFunction?: any;
 	formList: any;
 }) {
@@ -75,12 +73,10 @@ function CourseRegComponent({
 												{e.semester} semester
 											</h1>
 											<TableViewComponent
-												isPreview={isPreview}
 												key={i}
 												course={e.courses}
 												checkedValue={checkedValue}
 												setCheckedValue={
-													!isPreview &&
 													setCheckedValue
 												}
 											/>
