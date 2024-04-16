@@ -1,5 +1,5 @@
 export const AccoutCreationDefaultValues = {
-	courses: '',
+	faculty: '',
 	department: '',
 	studentID: '',
 	first_name: '',

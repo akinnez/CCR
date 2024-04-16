@@ -1,65 +1,41 @@
 'use client';
 
 import ModalComponent from '@/components/reusable/modal.component';
-import {Button} from '@/components/ui/button';
-import {DialogContent, DialogFooter} from '@/components/ui/dialog';
-import {ToObservable} from '@/services/toObservable';
+import loginGuard from '@/services/login.guard';
 import {courses} from '@/utils/Form/formgroup.utils';
 import CourseRegComponent from '@/views/Course-Registration/course-reg.component';
-import MobileViewRegisterComponent from '@/views/Course-Registration/mobileView.component';
 import RegistrationPreviewComponent from '@/views/Course-Registration/registration-preview.component';
-import {useState} from 'react';
-import {filter} from 'rxjs';
+import {useParams, useRouter} from 'next/navigation';
+import {useState, useEffect} from 'react';
+import {toast} from 'sonner';
 
 function RegisterPage() {
+	const route = useRouter();
+	const params = useParams();
+
 	const [isOpen, setOpen] = useState(false);
-	const [previewMode, setPreviewMode] = useState<Array<any>>([]);
+	const [value, setValue] = useState<Array<object> | null>(null);
+
+	useEffect(() => {
+		if (loginGuard(params?.id as string)) {
+			toast('Please, Log In ...');
+			route.push('/auth/login');
+		}
+	}, [params?.id as string]);
 
 	async function onSubmit(e: any, value: any) {
 		await e.preventDefault();
-		let first: any = [];
-		let second: any = [];
-
-		const data = ToObservable(value)
-			.pipe(filter((e: any) => e.id % 2 != 0))
-			.subscribe({
-				next: (res) => {
-					first.push(res);
-				},
-			});
-
-		const secondData = ToObservable(value)
-			.pipe(filter((e: any) => e.id % 2 == 0))
-			.subscribe({
-				next: (res) => second.push(res),
-			});
-
-		let previewMode = [
-			{
-				semester: 'first',
-				courses: first,
-			},
-			{
-				semester: 'second',
-				courses: second,
-			},
-		];
-		setPreviewMode(previewMode);
-		console.log(value, previewMode);
+		setValue(value);
 		setOpen(true);
-		data.unsubscribe(), secondData.unsubscribe();
 	}
 	return (
 		<>
 			<CourseRegComponent formList={courses} successFunction={onSubmit} />
-			{isOpen && previewMode.length != 0 && (
-				<ModalComponent
-					isOpen={isOpen}
-					{...{className: 'overflow-x-hidden overflow-y-auto'}}
-				>
+			{isOpen && (
+				<ModalComponent isOpen={isOpen}>
 					<RegistrationPreviewComponent
-						previewMode={previewMode}
 						setOpen={setOpen}
+						value={value}
 					/>
 				</ModalComponent>
 			)}

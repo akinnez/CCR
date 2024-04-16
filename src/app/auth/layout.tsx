@@ -1,4 +1,5 @@
 import type {Metadata} from 'next';
+import {Toaster} from 'sonner';
 
 export const metadata: Metadata = {
 	title: 'Student Home',
@@ -10,6 +11,7 @@ export default function AuthLayout({children}: {children: React.ReactNode}) {
 			<div className="lg:grid lg:grid-cols-2 h-screen lg:h-full ">
 				<div className="bg-foreground hidden lg:block lg:h-screen sticky top-0"></div>
 				<div className="px-3 lg:px-0">{children}</div>
+				<Toaster />
 			</div>
 		</>
 	);

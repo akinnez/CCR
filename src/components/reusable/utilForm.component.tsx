@@ -7,22 +7,22 @@ import {InputFormFieldComponent} from '@/components/reusable/formField';
 import {Card} from '@/components/ui/card';
 
 function FormComponent({
+	loading,
 	successFunction,
 	errorFunction,
 	formSchema,
 	defaultValues,
 	formList,
-	selectData = [],
 	title,
 	cta,
 	classNames,
 }: {
+	loading?: boolean;
 	successFunction?: any;
 	errorFunction?: any;
 	formSchema: any;
 	defaultValues?: any;
 	formList: any;
-	selectData?: any[];
 	title: string;
 	cta: string;
 	classNames?: string;
@@ -60,10 +60,11 @@ function FormComponent({
 									))}
 									<div className="py-2">
 										<Button
+											disabled={loading}
 											className="w-full text-lg"
 											size={'lg'}
 										>
-											{cta}
+											{loading ? 'Loading...' : cta}
 										</Button>
 									</div>
 								</form>

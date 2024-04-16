@@ -8,7 +8,7 @@ export const LoginformSchema = z.object({
 		.trim(),
 });
 export const accCreationformSchema = z.object({
-	courses: z.string(),
+	faculty: z.string(),
 	department: z.string(),
 	studentID: z.string().min(8, 'Please, Enter a valid StudentID').trim(),
 	first_name: z.string().min(2, 'Please, Enter a valid Name').trim(),

@@ -1,28 +1,42 @@
-import {Toaster} from '@/components/ui/sonner';
+import {useState} from 'react';
+import {useForm} from 'react-hook-form';
+
+import {useRouter} from 'next/navigation';
+
 import {accCreationformSchema} from '@/utils/Form/formSchema.util';
 import {AccoutCreationDefaultValues} from '@/utils/Form/form_default_values.util';
 import {AccountCreationForm} from '@/utils/Form/formgroup.utils';
 import {checkLevels} from '@/utils/checkLevels.util';
+import {IResponse} from '@/utils/Response/IResponse';
+
 import {useGetApi} from '@/hooks/useApi';
+import {zodResolver} from '@hookform/resolvers/zod';
 import {
 	InputFormFieldComponent,
 	SelectFormFieldComponent,
 } from '@/components/reusable/formField';
 import {Card} from '@/components/ui/card';
-import {useForm} from 'react-hook-form';
 import {Button} from '@/components/ui/button';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
 import {Form} from '@/components/ui/form';
-import {useState} from 'react';
+
 import {ToObservable} from '@/services/toObservable';
+import {post} from '@/services/api';
+
+import {z} from 'zod';
 import {find} from 'rxjs';
+import {AxiosResponse} from 'axios';
+import {toast} from 'sonner';
+
+import {BASE_URL} from '../../../environtment';
 
 function AccountComponent() {
+	const route = useRouter();
 	const form = useForm<z.infer<typeof accCreationformSchema>>({
 		resolver: zodResolver(accCreationformSchema),
 		defaultValues: AccoutCreationDefaultValues,
 	});
+
+	const [responseLoading, setLoading] = useState<boolean>(false);
 	const [data, loading, error] = useGetApi('/data/courses.json');
 	const [filterData, setFilterData] = useState<Array<object>>();
 	const [courses, setCourses] = useState<string>('');
@@ -33,14 +47,34 @@ function AccountComponent() {
 	const selectProps = {
 		onValueChange: (e: any) => onchanged(e),
 	};
-	function onsubmit(values: any) {
+	const onsubmit = (values: any) => {
 		let level = checkLevels(values.studentID);
 		if (!level || level == -1) return alert('An error has occur');
 		values.student_level = level;
-		values.courses = courses;
-
-		console.log(values);
-	}
+		values.faculty = courses;
+		setLoading(true);
+		const subs = post<IResponse>(
+			BASE_URL + '/student/register',
+			values
+		).subscribe({
+			next: (res: AxiosResponse<IResponse>) => {
+				toast(res.data.message);
+				setLoading(false);
+				route.push('/auth/login');
+			},
+			error: (err) => {
+				console.log(err);
+				toast(err.response.data.message);
+				if (err.response.data.statusCode == 400) {
+					route.push('/auth/login');
+				}
+				setLoading(false);
+			},
+			complete: () => {
+				subs.unsubscribe();
+			},
+		});
+	};
 
 	function onchanged(e: string) {
 		const value = ToObservable(data)
@@ -80,10 +114,10 @@ function AccountComponent() {
 								>
 									<SelectFormFieldComponent
 										form={form}
-										name="courses"
-										label="Course"
+										name="faculty"
+										label="Faculty"
 										data={data as any[]}
-										placeholder="Select your registered course"
+										placeholder="Select your faculty"
 										{...selectProps}
 									/>
 									<SelectFormFieldComponent
@@ -107,10 +141,13 @@ function AccountComponent() {
 									)}
 									<div className="py-2">
 										<Button
+											disabled={responseLoading}
 											className="w-full text-lg"
 											size={'lg'}
 										>
-											Create an account
+											{!responseLoading
+												? 'Create an account'
+												: 'Loading...'}
 										</Button>
 									</div>
 								</form>

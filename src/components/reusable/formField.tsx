@@ -13,7 +13,6 @@ import {
 	SelectTrigger,
 	SelectValue,
 } from '../ui/select';
-import {Label} from '../ui/label';
 
 export function InputFormFieldComponent({
 	form,
@@ -113,16 +112,12 @@ export function CheckboxFieldComponent({
 		if (!e.target.checked && !checkedValue.includes(label)) return;
 		if (!e.target.checked && checkedValue.includes(label)) {
 			checkedValue.splice(checkedValue.indexOf(label), 1);
-			console.log(checkedValue);
-
 			return setCheckedValue(checkedValue);
 		}
 		if (e.target.checked && !checkedValue.includes(label)) {
 			checkedValue.push(label);
-			console.log(checkedValue);
 			return setCheckedValue(checkedValue);
 		}
-		console.log(checkedValue);
 		return setCheckedValue(checkedValue);
 	}
 	return (
