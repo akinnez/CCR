@@ -4,21 +4,17 @@ import {useEffect, useState} from 'react';
 import Link from 'next/link';
 
 import {Button} from '@/components/ui/button';
-import useName from '@/hooks/useName';
 import {XCircle, Menu} from 'lucide-react';
 import {LoginValues} from '../../../environtment';
 
 function Navbar() {
 	const [isOpen, setOpen] = useState(false);
 	const [token, setToken] = useState(false);
-	const name = useName();
-	const getToken = JSON.parse(
-		sessionStorage.getItem(LoginValues) as string
-	)?.token;
+	const getToken = JSON.parse(sessionStorage.getItem(LoginValues) as string);
 
 	useEffect(() => {
-		getToken && setToken(true);
-	}, [getToken]);
+		getToken?.token && setToken(true);
+	}, [getToken?.token]);
 
 	function open() {
 		setOpen(true);
@@ -41,7 +37,7 @@ function Navbar() {
 		},
 		{
 			label: `${token ? 'Course Registration' : 'Academics'}`,
-			link: `${token ? `/${name}/course-reg` : '/'}`,
+			link: `${token ? `/${getToken?.studentID}/course-reg` : '/'}`,
 			classname: '',
 			props: {},
 		},
@@ -101,7 +97,7 @@ function Navbar() {
 
 				{token ? (
 					<div>
-						<span>{name}</span>
+						<span>{getToken?.first_name}</span>
 					</div>
 				) : (
 					<div>

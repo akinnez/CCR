@@ -50,7 +50,6 @@ function AccountComponent() {
 	const onsubmit = (values: any) => {
 		let level = checkLevels(values.studentID);
 		if (!level || level == -1) return alert('An error has occur');
-		values.student_level = level;
 		values.faculty = courses;
 		setLoading(true);
 		const subs = post<IResponse>(

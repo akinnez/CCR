@@ -28,7 +28,6 @@ function LogInComponent() {
 
 	function onsubmit(values: any) {
 		setLoading(true);
-		console.log(values);
 		const sub = post<IResponse>(
 			BASE_URL + '/student/login',
 			values
@@ -41,9 +40,11 @@ function LogInComponent() {
 				);
 				toast(res.data?.message);
 				setLoading(false);
-				router.push(`/${res.data?.payload?.first_name}`);
+				router.push(`/${res.data?.payload?.studentID}`);
 			},
 			error: (err) => {
+				// load error handler
+				console.log(err);
 				setLoading(false);
 			},
 			complete: () => {

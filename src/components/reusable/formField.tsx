@@ -115,7 +115,7 @@ export function CheckboxFieldComponent({
 			return setCheckedValue(checkedValue);
 		}
 		if (e.target.checked && !checkedValue.includes(label)) {
-			checkedValue.push(label);
+			checkedValue.push(label.id);
 			return setCheckedValue(checkedValue);
 		}
 		return setCheckedValue(checkedValue);

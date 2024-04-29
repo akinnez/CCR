@@ -2,16 +2,15 @@
 
 import {useEffect, useState} from 'react';
 import dynamic from 'next/dynamic';
-
 import {Button} from '@/components/ui/button';
-import useName from '@/hooks/useName';
+import {dataValues} from '../../../environtment';
 
 function CourseRegComponent({
 	successFunction,
 	formList,
 }: {
 	successFunction?: any;
-	formList: any;
+	formList?: any;
 }) {
 	useEffect(() => {
 		let getBody: HTMLDivElement = document.getElementById(
@@ -33,7 +32,8 @@ function CourseRegComponent({
 	const [checkedValue, setCheckedValue] = useState([]);
 	const [isTableShow, setTableShow] = useState(false);
 	const [isMobileShow, setMobileShow] = useState(false);
-	const getName = useName();
+	const user = JSON.parse(sessionStorage.getItem(dataValues) as string);
+	const getCourse = JSON.parse(sessionStorage.getItem('setCourse') as string);
 	const TableViewComponent = dynamic(
 		() => import('@/views/Course-Registration/tableView.component'),
 		{ssr: false, loading: () => <>Loading...</>}
@@ -49,9 +49,16 @@ function CourseRegComponent({
 					<h1 className="text-2xl lg:text-4xl text-center font-semibold lg:font-bold my-5">
 						Course Registration
 					</h1>
-					<p>Welcome {getName}, </p>
-					<p>College: Agriculture Science, </p>
-					<p>Department: Aquaculture and fishery management</p>
+					<p className="font-semibold lg:text-lg">
+						Welcome {user.payload.first_name}{' '}
+						{user.payload.last_name},{' '}
+					</p>
+					<p className="font-semibold lg:text-lg">
+						Faculty: {user.payload.faculty},{' '}
+					</p>
+					<p className="font-semibold lg:text-lg">
+						Department: {user.payload.department}
+					</p>
 				</div>
 				<div className="my-5">
 					<h3 className="font-bold text-lg text-center">
@@ -67,48 +74,51 @@ function CourseRegComponent({
 						<div className={`md:block hidden`}>
 							{isTableShow && (
 								<>
-									{formList.map((e: any, i: number) => (
-										<div className="my-5" key={i}>
-											<h1 className="capitalize text-md font-semibold">
-												{e.semester} semester
-											</h1>
-											<TableViewComponent
-												key={i}
-												course={e.courses}
-												checkedValue={checkedValue}
-												setCheckedValue={
-													setCheckedValue
-												}
-											/>
-										</div>
-									))}
+									<h1 className="capitalize text-md font-semibold text-center">
+										First semester
+									</h1>
+									<TableViewComponent
+										course={getCourse.first}
+										checkedValue={checkedValue}
+										setCheckedValue={setCheckedValue}
+									/>
+									<h1 className="capitalize text-md font-semibold text-center mt-5 mb-3">
+										second semester
+									</h1>
+									<TableViewComponent
+										course={getCourse.second}
+										checkedValue={checkedValue}
+										setCheckedValue={setCheckedValue}
+									/>
 								</>
 							)}
 						</div>
 						<div className={`md:hidden block`}>
 							{isMobileShow && (
 								<>
-									{formList.map((e: any, i: number) => (
-										<div className="my-5" key={i}>
-											<h1 className="capitalize text-md font-semibold">
-												{e.semester} semester
-											</h1>
-											<MobileViewRegisterComponent
-												formList={e.courses}
-												checkedValue={checkedValue}
-												setCheckedValue={
-													setCheckedValue
-												}
-											/>
-										</div>
-									))}
+									<h1 className="capitalize text-md font-semibold text-center">
+										First semester
+									</h1>
+									<MobileViewRegisterComponent
+										formList={getCourse.first}
+										checkedValue={checkedValue}
+										setCheckedValue={setCheckedValue}
+									/>
+									<h1 className="capitalize text-md font-semibold text-center mt-5 mb-3">
+										second semester
+									</h1>
+									<MobileViewRegisterComponent
+										formList={getCourse.second}
+										checkedValue={checkedValue}
+										setCheckedValue={setCheckedValue}
+									/>
 								</>
 							)}
 						</div>
 
-						<div className="py-2">
+						<div className="py-2 text-center">
 							<Button className="text-lg" size={'lg'}>
-								Preview
+								Submit
 							</Button>
 						</div>
 					</form>

@@ -83,51 +83,51 @@ export const ResultCheckerForm = [
 	},
 ];
 
-export const courses = [
-	{
-		semester: 'first',
-		courses: [
-			{
-				id: 101,
-				code: 'MTS',
-				semester: 'first',
-				title: 'Introduction to elementary mathematics',
-				numberOfUnits: 3,
-				lecturerInCharge: 'Mr. Orunmooru',
-				prerequisite: [],
-			},
-			{
-				id: 103,
-				code: 'MTS',
-				semester: 'first',
-				title: 'Introduction to elementary and psycological mathematics and physical entanglement',
-				numberOfUnits: 3,
-				lecturerInCharge: 'Mr. Orunmooru O. J',
-				prerequisite: ['MTS110, MTS 221'],
-			},
-		],
-	},
-	{
-		semester: 'second',
-		courses: [
-			{
-				id: 102,
-				code: 'MTS',
-				semester: 'second',
-				title: 'Introduction to elementary mathematics',
-				numberOfUnits: 3,
-				lecturerInCharge: 'Mr. Orunmooru',
-				prerequisite: [],
-			},
-			{
-				id: 104,
-				code: 'MTS',
-				semester: 'second',
-				title: 'Introduction to elementary mathematics',
-				numberOfUnits: 3,
-				lecturerInCharge: 'Mr. Orunmooru',
-				prerequisite: ['MTS110, MTS 221'],
-			},
-		],
-	},
-];
+// export const courses = [
+// 	{
+// 		semester: 'first',
+// 		courses: [
+// 			{
+// 				id: 101,
+// 				code: 'MTS',
+// 				semester: 'first',
+// 				title: 'Introduction to elementary mathematics',
+// 				numberOfUnits: 3,
+// 				lecturerInCharge: 'Mr. Orunmooru',
+// 				prerequisite: [],
+// 			},
+// 			{
+// 				id: 103,
+// 				code: 'MTS',
+// 				semester: 'first',
+// 				title: 'Introduction to elementary and psycological mathematics and physical entanglement',
+// 				numberOfUnits: 3,
+// 				lecturerInCharge: 'Mr. Orunmooru O. J',
+// 				prerequisite: ['MTS110, MTS 221'],
+// 			},
+// 		],
+// 	},
+// 	{
+// 		semester: 'second',
+// 		courses: [
+// 			{
+// 				id: 102,
+// 				code: 'MTS',
+// 				semester: 'second',
+// 				title: 'Introduction to elementary mathematics',
+// 				numberOfUnits: 3,
+// 				lecturerInCharge: 'Mr. Orunmooru',
+// 				prerequisite: [],
+// 			},
+// 			{
+// 				id: 104,
+// 				code: 'MTS',
+// 				semester: 'second',
+// 				title: 'Introduction to elementary mathematics',
+// 				numberOfUnits: 3,
+// 				lecturerInCharge: 'Mr. Orunmooru',
+// 				prerequisite: ['MTS110, MTS 221'],
+// 			},
+// 		],
+// 	},
+// ];

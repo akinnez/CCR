@@ -16,8 +16,8 @@ function TableViewComponent({
 }: {
 	course: any;
 	isPreview?: boolean;
-	setCheckedValue: any;
-	checkedValue: any;
+	setCheckedValue?: any;
+	checkedValue?: any;
 }) {
 	const [isOpen, setOpen] = useState(false);
 	const [data, setData] = useState({});
@@ -28,15 +28,17 @@ function TableViewComponent({
 	}
 	return (
 		<>
-			<table className="border w-full">
+			<table className="w-full">
 				<thead>
 					{!isPreview && <th className="py-5"></th>}
-					<th>Course</th>
+					{isPreview && <th className="py-5">S/N</th>}
+					<th>Course Code</th>
+					<th>Course Title</th>
 					<th>Units</th>
-					<th>Lecture-in-charge</th>
+					<th>Status</th>
 					<th>Pre-Requisite</th>
 				</thead>
-				<tbody className="text-center ">
+				<tbody>
 					{course &&
 						course.map((e: any, i: number) => (
 							<tr key={i}>
@@ -49,31 +51,28 @@ function TableViewComponent({
 										/>
 									</td>
 								)}
-								<td>
+								{isPreview && (
+									<td className="text-center">{i + 1}</td>
+								)}
+								<td className="text-center">
+									{e.course_id}
 									{e.code}
-									{e.id} -{' '}
+								</td>
+								<td>
 									<span
 										onClick={() => openCourseDescription(e)}
 										title="View course description"
-										className="cursor-pointer"
+										className="cursor-pointer hover:underline"
 									>
-										{e.title.length > 40
-											? e.title.substring(0, 40) + '...'
-											: e.title}
+										{e.title}
 									</span>
 								</td>
-								<td>{e.numberOfUnits}</td>
-								<td>
-									{e.lecturerInCharge.length > 20
-										? e.lecturerInCharge.substring(0, 20) +
-										  '...'
-										: e.lecturerInCharge}
+								<td className="text-center">{e.units}</td>
+								<td className="text-center">
+									{e.isOptional ? 'Elective' : 'Compulsory'}
 								</td>
-								<td>
-									{e.prerequisite &&
-									e.prerequisite.length != 0
-										? e.prerequisite
-										: 'None'}
+								<td className="text-center">
+									{e.prerequisite}
 								</td>
 							</tr>
 						))}

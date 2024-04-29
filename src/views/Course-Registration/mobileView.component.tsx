@@ -27,22 +27,18 @@ function MobileViewRegisterComponent({
 						</div>
 					)}
 					<h4 className="w-full mt-5 text-lg font-semibold">
-						{e.title} ({e.code}
-						{e.id})
+						{e.title} ({e.course_id}
+						{e.code})
 					</h4>
 					<p>
-						Number of Unit(s): {e.numberOfUnits} unit
-						{e.numberOfUnits > 1 ? 's' : ''}
+						Number of Unit(s): {e.units} unit
+						{e.units > 1 ? 's' : ''}
 					</p>
-					<p>Lecturer-in-charge: {e.lecturerInCharge}</p>
+					<p>Status: {e.isOptional ? 'Elective' : 'Compulsory'}</p>
 					<h4 className="w-full text-lg font-semibold">
 						Pre-Requisite
 					</h4>
-					<p>
-						{e.prerequisite && e.prerequisite.length != 0
-							? e.prerequisite
-							: 'None'}
-					</p>
+					<p>{e.prerequisite}</p>
 				</Card>
 			))}
 		</>

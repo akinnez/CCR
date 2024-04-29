@@ -13,23 +13,24 @@ function ViewCourseModal({data, setOpen}: {data: any; setOpen: any}) {
 		<>
 			<DialogContent>
 				<DialogTitle className="font-semibold mt-5 text-center leading-6">
-					{data.title} ({data.code}
-					{data.id})
+					{data.title} ({data.course_id}
+					{data.code})
 				</DialogTitle>
-				<DialogDescription>Not Available</DialogDescription>
+				<DialogDescription className="my-3">
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+					Ad, rem tempore consequatur fuga blanditiis incidunt soluta
+					sint eaque facilis repellat accusamus mollitia. Quasi dicta
+					unde molestias nulla quaerat, animi omnis.
+				</DialogDescription>
 				<div className="space-y-3">
-					<p>Units: {data.numberOfUnits}</p>
-					<p>Lecturer-in-charge: {data.lecturerInCharge}</p>
+					<p>Units: {data.units} units</p>
+					<p>Status: {data.isOptional ? 'Elective' : 'Compulsory'}</p>
 					<p className="font-semibold">Pre-Requisite</p>
-					<p>
-						{data.prerequisite.length != 0
-							? data.prerequisite
-							: 'None'}
-					</p>
+					<p>{data.prerequisite}</p>
 				</div>
 				<DialogFooter>
 					<Button
-						variant={'destructive'}
+						className="m-5"
 						size={'lg'}
 						onClick={() => setOpen(false)}
 					>

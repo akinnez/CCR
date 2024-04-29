@@ -33,14 +33,4 @@ export const resultCheckerformSchema = z.object({
 
 export const registerFormSchema = z.object({
 	courses: z.array(z.string()).refine((value) => value.some((item) => item)),
-	// courses: z
-	// 	.array(
-	// 		z.object({
-	// 			id: z.string(),
-	// 			title: z.string(),
-	// 			numberOfUnits: z.number(),
-	// 			lecturerInCharge: z.string(),
-	// 		})
-	// 	)
-	// 	.refine((value) => value.some((item) => item.id)),
 });

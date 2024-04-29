@@ -1,28 +1,31 @@
 [
 	{
 		"id": 1,
-		"name": "Agriculture and Veterinary Medicine",
-		"description": "Don’t think it is just about ‘working the land’. You’ll study land-based industries, such as rural management, animal medicine, GM crops, food security and climate change.",
+		"name": "Agriculture",
+		"description": "Don’t think it is just about ‘working the land’. You’ll study land-based industries, such as rural management, GM crops, food security and climate change.",
 		"departments": [
 			{
 				"id": 1,
-				"name": "Agriculture"
+				"name": "Agricultural Economics and Agribusiness",
+				"sCode": "AEA"
 			},
 			{
 				"id": 2,
-				"name": "Farm Management"
+				"name": "Agricultural Extension and Farm Management",
+				"sCode": "AEFM"
 			},
 			{
 				"id": 3,
-				"name": "Horticulture"
+				"name": "Agricultural Extension and Rural Development",
+				"sCode": "AERD"
 			},
 			{
 				"id": 4,
-				"name": "Plant and Crop Sciences"
+				"name": "Horticulture"
 			},
 			{
 				"id": 5,
-				"name": "Veterinary Medicine "
+				"name": "Plant and Crop Sciences"
 			}
 		]
 	},
@@ -691,6 +694,17 @@
 			{
 				"id": 7,
 				"name": "Travel and Tourism"
+			}
+		]
+	},
+	{
+		"id": 14,
+		"name": "Veterinary Medicine",
+		"description": "You will study all aspects of the animal health for diagnoses, treatments and assessment of all animal.",
+		"departments": [
+			{
+				"id": 1,
+				"name": "Veterinary Medicine"
 			}
 		]
 	}

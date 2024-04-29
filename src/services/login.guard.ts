@@ -6,7 +6,7 @@ function loginGuard(params?: string): boolean {
 	if (!login?.token) {
 		return true;
 	}
-	if (login?.token && login?.first_name != params) {
+	if (login?.token && login?.studentID != params) {
 		sessionStorage.removeItem(LoginValues);
 		return true;
 	}
